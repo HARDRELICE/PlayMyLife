@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/second"
+    tools:context=".activity.ExecuteTask">
+
+    <TextView
+        android:id="@+id/execute_task_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="@color/white"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/execute_task_description_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="30dp"
+        android:background="@drawable/progressbar_inside"
+        android:backgroundTint="@color/dark_grey"
+        android:fadingEdge="none"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/execute_task_title">
+
+        <TextView
+            android:id="@+id/execute_task_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textIsSelectable="false"
+            android:textSize="22sp" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/cycle_finish_count_caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:lines="1"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/cycle_finish_count"
+        app:layout_constraintTop_toBottomOf="@id/execute_task_description_wrapper"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/cycle_count"
+        />
+
+    <TextView
+        android:id="@+id/cycle_finish_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:lines="1"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/total_finish_count_caption"
+        app:layout_constraintTop_toBottomOf="@id/cycle_finish_count_caption"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text=""
+        />
+
+    <TextView
+        android:id="@+id/total_finish_count_caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:lines="1"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/total_finish_count"
+        app:layout_constraintTop_toBottomOf="@id/cycle_finish_count"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/total_count"
+        />
+
+    <TextView
+        android:id="@+id/total_finish_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:lines="1"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/time_wrapper"
+        app:layout_constraintTop_toBottomOf="@id/total_finish_count_caption"
+        android:text=""
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/time_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="30dp"
+        android:paddingHorizontal="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/execute_task_progress_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/total_finish_count">
+
+        <TextView
+            android:id="@+id/time_left_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="00"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/time_separator_first"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/time_separator_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text=":"
+            android:textColor="@color/white"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/time_left_minute"
+            app:layout_constraintStart_toEndOf="@id/time_left_hour" />
+
+        <TextView
+            android:id="@+id/time_left_minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="00"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/time_separator_second"
+            app:layout_constraintStart_toEndOf="@id/time_separator_first" />
+
+        <TextView
+            android:id="@+id/time_separator_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text=":"
+            android:textColor="@color/white"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/time_left_second"
+            app:layout_constraintStart_toEndOf="@id/time_left_minute" />
+
+        <TextView
+            android:id="@+id/time_left_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="00"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/time_separator_second" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/execute_task_progress_bar"
+        style="@style/roundProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_margin="30dp"
+        android:progress="0"
+        android:progressBackgroundTint="@color/dark_grey"
+        android:progressTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/execute_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/execute_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/ic_baseline_play_arrow_24"
+        app:backgroundTint="@color/white"
+        app:fabCustomSize="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:maxImageSize="60dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/restart_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_refresh_24"
+        app:backgroundTint="@color/white"
+        app:fabCustomSize="70dp"
+        app:layout_constraintBottom_toBottomOf="@id/execute_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/execute_button"
+        app:layout_constraintTop_toTopOf="@id/execute_button"
+        app:maxImageSize="35dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/quit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_clear_24"
+        app:backgroundTint="@color/white"
+        app:fabCustomSize="70dp"
+        app:layout_constraintBottom_toBottomOf="@id/execute_button"
+        app:layout_constraintEnd_toStartOf="@id/execute_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/execute_button"
+        app:maxImageSize="35dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

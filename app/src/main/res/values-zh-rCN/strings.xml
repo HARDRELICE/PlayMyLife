@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_home">任务</string>
+    <string name="title_dashboard">商店</string>
+    <string name="title_notifications">用户</string>
+    <string name="deadline_text">" 截止"</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">完成</string>
+    <string name="add_new_task">新任务</string>
+    <string name="no_duration">不限时</string>
+    <string name="name">名称</string>
+    <string name="description">描述</string>
+    <string name="reward">奖励</string>
+    <string name="duration">时长</string>
+    <string name="cycle_count">周期完成次数</string>
+    <string name="total_count">总共完成次数</string>
+    <string name="cycle">周期</string>
+    <string name="days">天</string>
+    <string name="cycle_limit">周期限制</string>
+    <string name="not_enough_money">余额不足</string>
+    <string name="bought">已购买</string>
+    <string name="days_small_cap">天</string>
+    <string name="add_new_good">新商品</string>
+    <string name="currency">货币</string>
+    <string name="price">价格</string>
+    <string name="点数">点数</string>
+    <string name="心愿">心愿</string>
+</resources>

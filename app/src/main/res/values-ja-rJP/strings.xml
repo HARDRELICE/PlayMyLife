@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_home">任務</string>
+    <string name="title_dashboard">商店</string>
+    <string name="title_notifications">ユーザー</string>
+    <string name="deadline_text">" 締め切り"</string>
+    <string name="cancel">キャンセル</string>
+    <string name="confirm">確認</string>
+    <string name="add_new_task">新しい任務</string>
+    <string name="no_duration">時間無制限</string>
+    <string name="name">名前</string>
+    <string name="description">説明</string>
+    <string name="reward">奨励</string>
+    <string name="duration">時間長</string>
+    <string name="cycle_count">サイクル完了数</string>
+    <string name="total_count">完了の総数</string>
+    <string name="cycle">サイクル</string>
+    <string name="days">日</string>
+    <string name="cycle_limit">サイクル制限</string>
+    <string name="not_enough_money">残高不足です</string>
+    <string name="bought">買った</string>
+    <string name="days_small_cap">日</string>
+    <string name="add_new_good">新製品</string>
+    <string name="currency">通貨</string>
+    <string name="price">価格</string>
+    <string name="点数">ポイント</string>
+    <string name="心愿">願い</string>
+</resources>

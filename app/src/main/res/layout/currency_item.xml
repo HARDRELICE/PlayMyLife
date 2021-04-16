@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/currency_icon"
+        android:padding="6dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/coin_p"/>
+
+    <TextView
+        android:id="@+id/currency_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingHorizontal="10dp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toEndOf="@id/currency_icon"
+        app:layout_constraintTop_toTopOf="@id/currency_icon"
+        app:layout_constraintBottom_toBottomOf="@id/currency_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        android:text="point"
+        android:textSize="32sp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
